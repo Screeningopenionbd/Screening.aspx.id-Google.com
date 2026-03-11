@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Survey Flow</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    /* Unique loader: concentric circles ripple */
+    .loader {
+      position: relative;
+      width: 80px;
+      height: 80px;
+      margin-bottom: 20px;
+    }
+    .loader div {
+      position: absolute;
+      border: 4px solid #00c6ff;
+      opacity: 1;
+      border-radius: 50%;
+      animation: ripple 2s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+    }
+    .loader div:nth-child(2) {
+      animation-delay: -1s;
+    }
+
+    @keyframes ripple {
+      0% {
+        top: 36px;
+        left: 36px;
+        width: 0;
+        height: 0;
+        opacity: 1;
+      }
+      100% {
+        top: 0;
+        left: 0;
+        width: 72px;
+        height: 72px;
+        opacity: 0;
+      }
+    }
+
+    h1 {
+      font-size: 28px;
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="loader">
+    <div></div><div></div>
+  </div>
+  <h1>We are finding a Survey</h1>
+
+  <script>
+    // Wait 20 seconds, then redirect
+    setTimeout(function() {
+      window.location.href = "https://opinionflow.github.io/OpenionFinder.aspx-id-00000001/";
+    }, 20000);
+  </script>
+</body>
+</html>
